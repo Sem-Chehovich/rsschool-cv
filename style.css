@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.photo__item {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.name {
+    font-size: 35px;
+    color: rgb(67, 67, 100);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.main__item-left {
+    border-top: 40px solid rgb(184, 184, 253);
+}
+
+.main__item-right {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.info {
+    font-size: 25px;
+    color: rgb(67, 67, 100);
+    border-bottom: 2px solid rgb(177, 177, 241);
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 23%;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    width: 44%;
+    background-color:rgb(184, 184, 253);
+
+}
+
+.rs-shool_svf {
+    width: 35px;
+    height: 35px;
+}
+
+.github_svg {
+    width: 35px;
+    height: 35px;
+}
+
+.link {
+    color: black;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: rgb(184, 184, 253);
+}
+
+@media (max-width: 850px) {
+    main {
+        flex-direction: column;
+    }
+    
+    .main__item-right {
+        margin: 0;
+    }
+
+    .footer {
+        margin: 0;
+    }
+
+    .footer__container {
+        width: 100%;
+    }
+}
