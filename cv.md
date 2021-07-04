@@ -41,3 +41,8 @@ const filterItems = (event) => {
     }
 }
 ```
+## Experience
+I’m doing tasks on codewars, htmlacademy.
+## About myself
+I use a creative approach to problem solve.
+I am always energetic and eager to learn new skills.
