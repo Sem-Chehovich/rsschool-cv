@@ -66,11 +66,11 @@
                        <mark>javascript</mark> 
         const filterItems = (event) => {
             let button = event.target
-            for (let i = 0; i &#60 filtersImages.length; i++) {
+            for (let i = 0; i&#60filtersImages.length; i++) {
                 filtersImages[i].classList.remove("hidden")
             }
             if (button.innerHTML === "Artwork") {
-                for (let i = 0; i &#60 filtersImages.length; i++){
+                for (let i = 0; i&#60filtersImages.length; i++){
                     if (!filtersImages[i].classList.contains("artwork")) {
                         filtersImages[i].classList.add("hidden");
                     } 
@@ -90,7 +90,7 @@
         </main>
         <footer class="footer">
             <div class="footer__container">
-                <time class="date"> Made in 2021</time>
+                <time class="date">2021</time>
                 <div class="footer_links">
                     <a target="_blank" href="https://rs.school/"><img class="rs-shool_svf" src="./img/rs_school_js.svg" alt="RS shool"></a> 
                     <a target="_blank" href="https://github.com/Sem-Chehovich"><img class="github_svg" src="./img/Octicons-mark-github.svg" alt="github"></a> 
