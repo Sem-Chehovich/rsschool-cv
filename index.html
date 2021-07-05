@@ -66,11 +66,11 @@
                        <mark>javascript</mark> 
         const filterItems = (event) => {
             let button = event.target
-            for (let i = 0; i&#60filtersImages.length; i++) {
+            for (let i = 0; i&#60;filtersImages.length; i++) {
                 filtersImages[i].classList.remove("hidden")
             }
             if (button.innerHTML === "Artwork") {
-                for (let i = 0; i&#60filtersImages.length; i++){
+                for (let i = 0; i&#60;filtersImages.length; i++){
                     if (!filtersImages[i].classList.contains("artwork")) {
                         filtersImages[i].classList.add("hidden");
                     } 
