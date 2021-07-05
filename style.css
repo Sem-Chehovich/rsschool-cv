@@ -4,6 +4,10 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
 }
+
+.container {
+    margin: 0 auto;
+}
 .photo__item {
     width: 250px;
     height: 250px;
@@ -37,13 +41,13 @@ main {
 .footer {
     display: flex;
     justify-content: flex-end;
-    margin-right: 23%;
+    margin-right: 22%;
 }
 
 .footer__container {
     display: flex;
     justify-content: space-between;
-    width: 44%;
+    width: 45%;
     background-color:rgb(184, 184, 253);
 
 }
