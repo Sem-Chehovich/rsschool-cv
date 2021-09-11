@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/shades-of-purple.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/shades-of-purple.min.css">
     <title>CV</title>
 </head>
 <body>
@@ -82,10 +80,10 @@
                     <pre class="pre">
         <code>
         function revrot(str, sz) {
-            if (sz <= 0 || str.length === 0) return ''
+            if (sz &lt= 0 || str.length === 0) return ''
         if (sz > str.length) return ''
         let x = ''
-        for (let i = 1; i <= Math.floor(str.length / sz); i++) {
+        for (let i = 1; i &lt= Math.floor(str.length / sz); i++) {
             let y = str.slice(sz * (i-1),i * sz)
             let isInteg = y.split('').map(l => l*l*l).reduce((sum,el)=>sum +el)%2
             if(!isInteg) {
@@ -104,11 +102,11 @@
                     <h2 class="project__header info" id="project">My Projects</h2>
                     <div class="projects__flex">
                         <figure class="project__one">
-                            <a target="_blank" href="https://rolling-scopes-school.github.io/sem-chehovich-JSFEPRESCHOOL/museum/"><img class="photo__item" src="./img/Снимок экрана 2021-09-11 172642.png" alt="museum"></a> 
+                            <a target="_blank" href="https://rolling-scopes-school.github.io/sem-chehovich-JSFEPRESCHOOL/museum/"><img class="photo__item" src="./img/1.png" alt="museum"></a> 
                             <figcaption>Louvre Museum website</figcaption>
                         </figure>
                         <figure class="project__two">
-                            <a target="_blank" href="https://rolling-scopes-school.github.io/sem-chehovich-JSFEPRESCHOOL/js-clock/"><img class="photo__item" src="./img/Снимок экрана 2021-09-11 172753.png" alt="js-clock"></a> 
+                            <a target="_blank" href="https://rolling-scopes-school.github.io/sem-chehovich-JSFEPRESCHOOL/js-clock/"><img class="photo__item" src="./img/2.png" alt="js-clock"></a> 
                             
                             <figcaption>Clock and calendar on JS</figcaption>
                         </figure>
@@ -139,5 +137,7 @@
     
         </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
