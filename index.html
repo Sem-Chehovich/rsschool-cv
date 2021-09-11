@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/shades-of-purple.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +17,20 @@
 </head>
 <body>
     <div class="container">
+        <header>
+            <nav class="header__item nav">
+                <ul class="menu__header">
+                    <li class="menu__item"><a class="link" href="#contact">Contact</a></li>
+                    <li class="menu__item"><a class="link" href="#languages">Languages</a></li>
+                    <li class="menu__item"><a class="link" href="#skills">Skills</a></li>
+                    <li class="menu__item"><a class="link" href="#soft">Soft skills</a></li>
+                    <li class="menu__item"><a class="link" href="#code">Code example</a></li>
+                    <li class="menu__item"><a class="link" href="#project">My Projects</a></li>
+                    <li class="menu__item"><a class="link" href="#experience">Experience</a></li>
+                    <li class="menu__item"><a class="link" href="#education">Education</a></li>
+                </ul>
+            </nav>
+        </header>
         <main> 
             <section class="main__item main__item-left">
                 <h1 class="name">Sam Chehovich</h1>
@@ -21,7 +38,7 @@
                     <img class="photo__item" src="./img/depositphotos_42242043-stock-photo-wolf-head.jpg" alt="Картинка волка"/>
                 </div>
                 <div class="main__item-contact contact">
-                    <h2 class="contact__info info">Contact Info:</h2>
+                    <h2 id="contact" class="contact__info info">Contact Info:</h2>
                     <ul class="contact__list">
                         <li class="contact__list-item">mail - 
                             <a class="link" href="mailto:semchehovich@gmail.com">semchehovich@gmail.com </a>
@@ -34,14 +51,14 @@
                     </ul>
                 </div>
                 <div class="main__item-lang lang">
-                    <h2 class="lang__header info">Languages</h2>
+                    <h2 class="lang__header info" id="languages">Languages</h2>
                     <p class="lang__info">English - A2</p>
                     <p class="lang__info">Russian - native</p>
                 </div>
             </section>
             <section class="main__item main__item-right">
                 <div class="skills">
-                    <h2 class="skills__header info">Skills:</h2>
+                    <h2 class="skills__header info" id="skills">Skills:</h2>
                     <ul class="skills__list list">
                         <li class="skills__list-item list-item">Computer Science</li>
                         <li class="skills__list-item list-item">HTML/Css </li>
@@ -50,7 +67,7 @@
                     </ul>
                 </div>
                 <div class="soft-skills">
-                    <h2 class="soft-skills__header info"> Soft skills: </h2>
+                    <h2 class="soft-skills__header info" id="soft"> Soft skills: </h2>
                     <ul class="soft-skills__list list">
                         <li class="soft-skills__list-item list-item">Active listening</li>
                         <li class="soft-skills__list-item list-item">Communication</li>
@@ -61,30 +78,53 @@
                     </ul>
                 </div>
                 <div class="code">
-                    <h2 class= "code__header info">Code example</h2>
-                    <pre>
-                       <mark>javascript</mark> 
-        const filterItems = (event) => {
-            let button = event.target
-            for (let i = 0; i&#60;filtersImages.length; i++) {
-                filtersImages[i].classList.remove("hidden")
+                    <h2 class= "code__header info" id="code">Code example</h2>
+                    <pre class="pre">
+        <code>
+        function revrot(str, sz) {
+            if (sz <= 0 || str.length === 0) return ''
+        if (sz > str.length) return ''
+        let x = ''
+        for (let i = 1; i <= Math.floor(str.length / sz); i++) {
+            let y = str.slice(sz * (i-1),i * sz)
+            let isInteg = y.split('').map(l => l*l*l).reduce((sum,el)=>sum +el)%2
+            if(!isInteg) {
+            x = x + y.split('').reverse().join('')
+            } else {
+            x = x + y.slice(1) + y[0]
             }
-            if (button.innerHTML === "Artwork") {
-                for (let i = 0; i&#60;filtersImages.length; i++){
-                    if (!filtersImages[i].classList.contains("artwork")) {
-                        filtersImages[i].classList.add("hidden");
-                    } 
-                }
-            }
+        }
+        return x
+        }
+                        </code>
+
                     </pre>
                 </div>
+                <div class="my__project">
+                    <h2 class="project__header info" id="project">My Projects</h2>
+                    <div class="projects__flex">
+                        <figure class="project__one">
+                            <a target="_blank" href="https://rolling-scopes-school.github.io/sem-chehovich-JSFEPRESCHOOL/museum/"><img class="photo__item" src="./img/Снимок экрана 2021-09-11 172642.png" alt="museum"></a> 
+                            <figcaption>Louvre Museum website</figcaption>
+                        </figure>
+                        <figure class="project__two">
+                            <a target="_blank" href="https://rolling-scopes-school.github.io/sem-chehovich-JSFEPRESCHOOL/js-clock/"><img class="photo__item" src="./img/Снимок экрана 2021-09-11 172753.png" alt="js-clock"></a> 
+                            
+                            <figcaption>Clock and calendar on JS</figcaption>
+                        </figure>
+                    </div>
+                   
+                </div>
                 <div class="experience">
-                    <h2 class="experience__header info">Experience</h2>
+                    <h2 class="experience__header info" id="experience">Experience</h2>
                     <p class="experience__info">I’m doing tasks on codewars, htmlacademy.</p>
                 </div>
                 <div class="edu">
-                    <h2 class="edu__header info">Education</h2>
+                    <h2 class="edu__header info" id="education">Education</h2>
+                    <h3>University</h3>
                     <p class="edu__info"> [2011-2016] Polotsk state university\ Faculty radio electronics </p>
+                    <h3>Courses</h3>
+                    <p class="edu__info"> [2021] RS School (Stage-0)</p>
                 </div>
             </section>
         </main>

@@ -1,6 +1,11 @@
 * {
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
 }
@@ -67,11 +72,33 @@ main {
     text-decoration: none;
 }
 
+.projects__flex {
+    display: flex;
+}
+
+figcaption {
+
+    text-align: center;
+}
+
 .link:hover {
     color: rgb(184, 184, 253);
 }
 
-@media (max-width: 850px) {
+.menu__header {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.menu__item {
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+
+
+@media (max-width: 1000px) {
     main {
         flex-direction: column;
     }
@@ -87,4 +114,18 @@ main {
     .footer__container {
         width: 100%;
     }
+    .projects__flex {
+        flex-wrap: wrap;
+    }
 }
+
+@media (max-width: 650px) {
+    .pre {
+        font-size: 7px;
+    }
+
+    .menu__header {
+        flex-wrap: wrap;
+    }
+}
+
