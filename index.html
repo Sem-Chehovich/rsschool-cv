@@ -80,10 +80,10 @@
                     <pre class="pre">
         <code>
         function revrot(str, sz) {
-            if (sz &lt= 0 || str.length === 0) return ''
+            if (sz &lt;= 0 || str.length === 0) return ''
         if (sz > str.length) return ''
         let x = ''
-        for (let i = 1; i &lt= Math.floor(str.length / sz); i++) {
+        for (let i = 1; i &lt;= Math.floor(str.length / sz); i++) {
             let y = str.slice(sz * (i-1),i * sz)
             let isInteg = y.split('').map(l => l*l*l).reduce((sum,el)=>sum +el)%2
             if(!isInteg) {
