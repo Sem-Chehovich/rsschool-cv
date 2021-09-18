@@ -6,12 +6,16 @@ html {
     scroll-behavior: smooth;
 }
 
+
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
+    margin: 0 auto;
 }
 
 .container {
     margin: 0 auto;
+    position: relative;
 }
 .photo__item {
     width: 250px;
@@ -96,6 +100,45 @@ figcaption {
     text-decoration: none;
 }
 
+.nav__showmenu {
+    display: none;
+}
+
+.nav__showmenu:hover {
+    cursor: pointer;
+}
+
+.burger__menu {
+    width: 40%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    background-color: rgb(184, 184, 253);
+    font-size: 30px;
+    transition: all 1s ease-out;
+}
+
+#showmenu {
+    display: none;
+}
+
+.visible {
+left: 0;
+}
+
+/* #showmenu:checked ~ .burger__menu{
+left: 0;
+} */
+
+.bg__header {
+    list-style-type: none;
+}
+
+.bg__item {
+    margin-bottom: 20px;
+}
+
 
 
 @media (max-width: 1000px) {
@@ -129,3 +172,12 @@ figcaption {
     }
 }
 
+@media (max-width: 760px) {
+    .header__item {
+        display: none;
+    }
+
+    .nav__showmenu {
+        display: inline;
+    }
+}
