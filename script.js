@@ -6,7 +6,6 @@ function showMenu(event) {
     if (event.target.classList.contains("nav__showmenu")) {
         burgerMenu.classList.add("visible")
     }
-    console.dir(event.target)
 }
 
 function closeMenu(event) {
