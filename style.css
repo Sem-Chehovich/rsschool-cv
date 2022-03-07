@@ -17,14 +17,46 @@ body {
     margin: 0 auto;
     position: relative;
 }
-.photo__item {
+
+span {
+    font-weight: bold;
+}
+
+.photo img {
     width: 250px;
-    height: 250px;
+    height: 320px;
+}
+.photo__item {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
 }
 .name {
     font-size: 35px;
     color: rgb(67, 67, 100);
+}
+
+.last-project {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.project__one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project__on {
+    margin-left: 67px;
+}
+
+.skills__wrapper {
+    display: flex;
+}
+
+.soft-skills {
+    margin-left: 20%;
 }
 
 main {
@@ -33,7 +65,8 @@ main {
 }
 
 .main__item-left {
-    border-top: 40px solid rgb(184, 184, 253);
+    border-top: 26px solid rgb(184, 184, 253);
+    /* margin-left: 40px; */
 }
 
 .main__item-right {
@@ -78,6 +111,8 @@ main {
 
 .projects__flex {
     display: flex;
+    flex-wrap: wrap;
+    width: 47rem;
 }
 
 figcaption {
@@ -138,6 +173,12 @@ left: 0;
 .bg__item {
     margin-bottom: 20px;
 }
+
+/* .photo__wrap {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+} */
 
 
 

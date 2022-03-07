@@ -24,7 +24,6 @@
                     <li class="bg__item"><a class="link" href="#languages">Languages</a></li>
                     <li class="bg__item"><a class="link" href="#skills">Skills</a></li>
                     <li class="bg__item"><a class="link" href="#soft">Soft skills</a></li>
-                    <li class="bg__item"><a class="link" href="#code">Code example</a></li>
                     <li class="bg__item"><a class="link" href="#project">My Projects</a></li>
                     <li class="bg__item"><a class="link" href="#experience">Experience</a></li>
                     <li class="bg__item"><a class="link" href="#education">Education</a></li>
@@ -37,7 +36,6 @@
                     <li class="menu__item"><a class="link" href="#languages">Languages</a></li>
                     <li class="menu__item"><a class="link" href="#skills">Skills</a></li>
                     <li class="menu__item"><a class="link" href="#soft">Soft skills</a></li>
-                    <li class="menu__item"><a class="link" href="#code">Code example</a></li>
                     <li class="menu__item"><a class="link" href="#project">My Projects</a></li>
                     <li class="menu__item"><a class="link" href="#experience">Experience</a></li>
                     <li class="menu__item"><a class="link" href="#education">Education</a></li>
@@ -48,7 +46,7 @@
             <section class="main__item main__item-left">
                 <h1 class="name">Sam Chehovich</h1>
                 <div class="main__item-photo photo">
-                    <img class="photo__item" src="./img/depositphotos_42242043-stock-photo-wolf-head.jpg" alt="Картинка волка"/>
+                        <img class="photo" src="./img/1646581046818.JPEG" alt="Картинка волка"/>
                 </div>
                 <div class="main__item-contact contact">
                     <h2 id="contact" class="contact__info info">Contact Info:</h2>
@@ -65,72 +63,83 @@
                 </div>
                 <div class="main__item-lang lang">
                     <h2 class="lang__header info" id="languages">Languages</h2>
-                    <p class="lang__info">English - A2</p>
+                    <p class="lang__info">English - B1</p>
                     <p class="lang__info">Russian - native</p>
                 </div>
             </section>
             <section class="main__item main__item-right">
-                <div class="skills">
-                    <h2 class="skills__header info" id="skills">Skills:</h2>
-                    <ul class="skills__list list">
-                        <li class="skills__list-item list-item">Computer Science</li>
-                        <li class="skills__list-item list-item">HTML/Css </li>
-                        <li class="skills__list-item list-item">JS</li>
-                        <li class="skills__list-item list-item">Basics Git & GitHub</li>
-                    </ul>
-                </div>
-                <div class="soft-skills">
-                    <h2 class="soft-skills__header info" id="soft"> Soft skills: </h2>
-                    <ul class="soft-skills__list list">
-                        <li class="soft-skills__list-item list-item">Active listening</li>
-                        <li class="soft-skills__list-item list-item">Communication</li>
-                        <li class="soft-skills__list-item list-item">Customer service</li>
-                        <li class="soft-skills__list-item list-item">Leadership</li>
-                        <li class="soft-skills__list-item list-item">Time management</li>
-                        <li class="soft-skills__list-item list-item">Problem-solving</li>
-                    </ul>
-                </div>
-                <div class="code">
-                    <h2 class= "code__header info" id="code">Code example</h2>
-                    <pre class="pre">
-        <code>
-        function revrot(str, sz) {
-            if (sz &lt;= 0 || str.length === 0) return ''
-        if (sz > str.length) return ''
-        let x = ''
-        for (let i = 1; i &lt;= Math.floor(str.length / sz); i++) {
-            let y = str.slice(sz * (i-1),i * sz)
-            let isInteg = y.split('').map(l => l*l*l).reduce((sum,el)=>sum +el)%2
-            if(!isInteg) {
-            x = x + y.split('').reverse().join('')
-            } else {
-            x = x + y.slice(1) + y[0]
-            }
-        }
-        return x
-        }
-                        </code>
-
-                    </pre>
+                <div class="skills__wrapper">
+                    <div class="skills">
+                        <h2 class="skills__header info" id="skills">Skills:</h2>
+                        <ul class="skills__list list">
+                            <li class="skills__list-item list-item">Computer Science</li>
+                            <li class="skills__list-item list-item">Basics Git & GitHub</li>
+                            <li class="skills__list-item list-item">Webpack</li>
+                            <li class="skills__list-item list-item">HTML/CSS/SCSS </li>
+                            <li class="skills__list-item list-item">BEM</li>
+                            <li class="skills__list-item list-item">JS</li>
+                            <li class="skills__list-item list-item">TS</li>
+                            <li class="skills__list-item list-item">React</li>
+                            <li class="skills__list-item list-item">Node JS</li>
+                            <li class="skills__list-item list-item">Fetch/RESTful API</li>
+                        </ul>
+                    </div>
+                    <div class="soft-skills">
+                        <h2 class="soft-skills__header info" id="soft"> Soft skills: </h2>
+                        <ul class="soft-skills__list list">
+                            <li class="soft-skills__list-item list-item">Active listening</li>
+                            <li class="soft-skills__list-item list-item">Communication</li>
+                            <li class="soft-skills__list-item list-item">Customer service</li>
+                            <li class="soft-skills__list-item list-item">Leadership</li>
+                            <li class="soft-skills__list-item list-item">Time management</li>
+                            <li class="soft-skills__list-item list-item">Problem-solving</li>
+                            <li class="soft-skills__list-item list-item">Focus on results</li>
+                            <li class="soft-skills__list-item list-item">Team player</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="my__project">
                     <h2 class="project__header info" id="project">My Projects</h2>
                     <div class="projects__flex">
-                        <figure class="project__one">
-                            <a target="_blank" href="https://rolling-scopes-school.github.io/sem-chehovich-JSFEPRESCHOOL/museum/"><img class="photo__item" src="./img/1.png" alt="museum"></a> 
-                            <figcaption>Louvre Museum website</figcaption>
+                        <figure class="project__one project__on">
+                            <a target="_blank" href="https://rolling-scopes-school.github.io/sem-chehovich-JSFE2021Q3/art-quiz/"><img class="photo__item" src="./img/1.png" alt="museum"></a> 
+                            <figcaption>Art-quiz. SPA game on vanilla JS</figcaption>
                         </figure>
-                        <figure class="project__two">
-                            <a target="_blank" href="https://rolling-scopes-school.github.io/sem-chehovich-JSFEPRESCHOOL/js-clock/"><img class="photo__item" src="./img/2.png" alt="js-clock"></a> 
+                        <figure class="project__one">
+                            <a target="_blank" href="https://rolling-scopes-school.github.io/sem-chehovich-JSFE2021Q3/momentum/"><img class="photo__item" src="./img/2.png" alt="js-clock"></a> 
                             
-                            <figcaption>Clock and calendar on JS</figcaption>
+                            <figcaption>Momentum is program widget on vanilla JS</figcaption>
+                        </figure>
+                        <figure class="project__one">
+                            <a target="_blank" href="https://rolling-scopes-school.github.io/sem-chehovich-JSFE2021Q3/christmas-task/"><img class="photo__item" src="./img/3.png" alt="museum"></a> 
+                            <figcaption>Christmas-game. SPA game on vanilla TS</figcaption>
+                        </figure>
+                        <figure class="project__one">
+                            <a target="_blank" href="https://rs-lang-sem-chehovich.netlify.app/"><img class="photo__item" src="./img/4.png" alt="js-clock"></a> 
+                            
+                            <figcaption>English tutorial program on REACT</figcaption>
                         </figure>
                     </div>
                    
                 </div>
                 <div class="experience">
                     <h2 class="experience__header info" id="experience">Experience</h2>
-                    <p class="experience__info">I’m doing tasks on codewars, htmlacademy.</p>
+                    <h3>Summary</h3>
+                    <ul class="soft-skills__list list">
+                        <li class="soft-skills__list-item list-item">One year of experience in web development with different technologies.</li>
+                        <li class="soft-skills__list-item list-item">Experience: HTML, CSS, JavaScript, TypeScript, SCSS, ReactJs, Rest, Git, ESLint, Webpack.</li>
+                        <li class="soft-skills__list-item list-item">Currently, the main focus is on front-end development using React, BEM.</li>
+                        <li class="soft-skills__list-item list-item">Problem-solving experience.</li>
+                        <li class="soft-skills__list-item list-item">Have experience in creating responsive single-page applications and making an adaptive design.</li>
+                    </ul>
+                    <h3>Last project</h3>
+                    <p class="experience__info last-project"><span>Project Roles:</span> Front-end developer</p>
+                    <p class="experience__info last-project"><span>Team:</span> 3 members</p>
+                    <p class="experience__info last-project"><span>My Role:</span> Team lead</p>
+                    <p class="experience__info last-project"><span>Project:</span> English self-instruction program, Consisting of two games and a dictionary</p>
+                    <p class="experience__info last-project">In the dictionary, it is possible to listen to audio, mark words as learned and difficult</p>
+                    <p class="experience__info last-project">Possibility of authorization</p>
+                    <p class="experience__info last-project">The user's words and achievements are stored on the server</p>
                 </div>
                 <div class="edu">
                     <h2 class="edu__header info" id="education">Education</h2>
@@ -138,6 +147,8 @@
                     <p class="edu__info"> [2011-2016] Polotsk state university\ Faculty radio electronics </p>
                     <h3>Courses</h3>
                     <p class="edu__info"> [2021] RS School (Stage-0)</p>
+                    <p class="edu__info"> [2021] RS School (Stage-1)</p>
+                    <p class="edu__info"> [2022] RS School (Stage-2)</p>
                 </div>
             </section>
         </main>
